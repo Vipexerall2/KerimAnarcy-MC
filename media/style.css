@@ -202,12 +202,6 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-
-.main1_logo_a {
-    margin-bottom: var(--nice-padding);
-    cursor: default;
-}
-
 /* Ana stil */
 .main1_logo {
   width: 150px;
@@ -219,18 +213,18 @@ body {
   animation: fadeAndGrow 2s infinite;
 }
 
-/* Yuvarlak çerçevenin solma ve büyüme animasyonu */
+/* Yuvarlak Ã§erÃ§evenin solma ve bÃ¼yÃ¼me animasyonu */
 @keyframes fadeAndGrow {
   0% {
-    border: 5px solid rgba(255, 255, 255, 1); /* Baþlangýçta net çerçeve */
+    border: 5px solid rgba(255, 255, 255, 1); /* BaÃ¾langÃ½Ã§ta net Ã§erÃ§eve */
     transform: scale(2); /* Normal boyutta */
   }
   50% {
-    border: 10px solid rgba(255, 255, 255, 0.5); /* Çerçeve hafif soluklaþýr */
-    transform: scale(2.1); /* Hafifçe büyür */
+    border: 10px solid rgba(255, 255, 255, 0.5); /* Ã‡erÃ§eve hafif soluklaÃ¾Ã½r */
+    transform: scale(2.1); /* HafifÃ§e bÃ¼yÃ¼r */
   }
   100% {
-    border: 15px solid rgba(255, 255, 255, 0); /* Çerçeve tamamen solar */
+    border: 15px solid rgba(255, 255, 255, 0); /* Ã‡erÃ§eve tamamen solar */
     transform: scale(2); /* Yeniden eski boyutuna gelir */
   }
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KerimAnarcy - Özel Kod</title>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #getCodeButton {
+            display: none;
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            border: none;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .code-display {
+            margin-top: 150px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button onclick="location.href='index.html'">Ana Sayfa</button>
+        <button onclick="showGetCodeButton()">Kod Al</button>
+    </nav>
+
+    <button id="getCodeButton" onclick="getCode()">Kod Al</button>
+    <div id="codeMessage"></div>
+
+    <script>
+        function showGetCodeButton() {
+            document.getElementById('getCodeButton').style.display = 'block';
+        }
+
+        let codeObtained = false;
+
+        function getCode() {
+            if (!codeObtained) {
+                document.getElementById('codeMessage').innerText = 'Güncel kod aranıyor...';
+                setTimeout(() => {
+                    document.getElementById('codeMessage').innerText = 'Kod: /yakında';
+                    codeObtained = true;
+                }, 6000);
+            } else {
+                navigator.clipboard.writeText('/yakında');
+            }
+        }
+    </script>
+    <div id="codeDisplay" class="code-display hidden">
+        <h2>Bu Kod Ne Veriyor?</h2>
+        <p>Yakında</p>
+        <p>Yakında</p>
+        <h2>Not:</h2>
+        <p>Çıkan bu kodu "slash" ile birlikte anarcy oyun modunun sohbetine yaz ve ödül kazan!</p>
+    </div>
+</body>
+</html>
